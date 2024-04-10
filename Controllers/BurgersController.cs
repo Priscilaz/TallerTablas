@@ -43,7 +43,7 @@ namespace PriscilaZuniga_WebCodeFirst.Controllers
             return View(burger);
         }
 
-        // GET: Burgers/Create
+        // GET: Burgers/Create        Muestra el formulario en blanco
         public IActionResult Create()
         {
             return View();
@@ -54,7 +54,7 @@ namespace PriscilaZuniga_WebCodeFirst.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BurgerID,Name,WithCheese,Precio")] Burger burger)
+        public async Task<IActionResult> Create([Bind("BurgerID,Name,WithCheese,Precio")] Burger burger) //Conecta con la BD
         {
             if (ModelState.IsValid)
             {
