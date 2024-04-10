@@ -11,5 +11,6 @@ namespace PriscilaZuniga_WebCodeFirst.Models
         [Range(0.01, 9999.99)]
         public decimal Precio { get; set; }
         
+        
     }
 }
