@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using WebCodeFirst.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<PriscilaZuniga_WebCodeFirstContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PriscilaZuniga_WebCodeFirstContext") ?? throw new InvalidOperationException("Connection string 'PriscilaZuniga_WebCodeFirstContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
