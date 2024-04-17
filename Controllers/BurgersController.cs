@@ -152,6 +152,7 @@ namespace PriscilaZuniga_WebCodeFirst.Controllers
         private bool BurgerExists(int id)
         {
             return _context.Burger.Any(e => e.BurgerID == id);
+            //Cambio
         }
     }
 }
